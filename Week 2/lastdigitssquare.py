@@ -2,7 +2,7 @@ n = int(input())
 lesser_n = n%60
 lesser_nplus = (n+1)%60
 
-def fibo(n):
+def fibonacci(n):
     a, b = 0, 1
     for _ in range(2, n+1):
         c = a+b
@@ -13,11 +13,12 @@ def fibo(n):
 if lesser_n<=1:
     a = lesser_n
 else:
-    a = fibo(lesser_n)
+    a = fibonacci(lesser_n)
 if lesser_nplus<=1:
     b = lesser_nplus
 else:
-    b = fibo(lesser_nplus)
+    b = fibonacci(lesser_nplus)
 
  
-print((a*b)%10)
+ans = (a*b)%10
+print(ans)
